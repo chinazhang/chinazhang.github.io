@@ -23,7 +23,7 @@
 <p>新增对撞机开放数据链接   http://opendata.cern.ch/docs/about-cms</p>
 <h1>设置atom相关命令备注</h1>
 <p>newchange "use git pull https://github.com/chinazhang/chinazhang.github.io.git" get Atom support</p>
-<h1>使用GitHub+Pelican搭建博客，并使用Atom作为编辑器的一些tips</h1>
+<h2>使用GitHub+Pelican搭建博客，并使用Atom作为编辑器的一些tips</h2>
 <p>Pelican 搭建博客后，GitHub上的master分支为网页文件，source分支为生成master分支内容的源代码。
 因而Atom中我需要建立两个项目，一个与master分支同步，一个与source分支同步。</p>
 <ol>
@@ -55,15 +55,10 @@ git checkout source
 
 <p>至此，Atom中的source文件夹中同步就变成source分支同步了，而output文件夹仍然为master同步。完成了Atom的配置</p>
 <p>make html需要到output的上一级文件夹里用git的bash窗口敲该命令，完成后到Atom里进行上传代码</p>
+<h2>Pelican 备注</h2>
+<p>在content下面创建pages文件夹，并放一个md文件进去，就会在博客主页上多一个标签页。其他的准备学习下下面的官方手册</p>
+<p><a href="http://docs.getpelican.com/en/stable/">Pelican官方手册链接</a></p>
 <h2>git 命令备注</h2>
-<ol>
-<li>新建source分支 切换到source分支</li>
-</ol>
-<div class="highlight"><pre><span></span>git branch source
-git checkout source
-</pre></div>
-
-
 <ol>
 <li>删除GitHub上的某个文件夹</li>
 </ol>
@@ -81,7 +76,7 @@ git pull origin source
 </pre></div>
 
 
-<h1>其他备注</h1>
+<h2>其他备注</h2>
 <p>树莓派本地IP 192.168.137.102</p>
 </section>
         <section id="extras" class="body">
