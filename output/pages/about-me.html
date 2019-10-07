@@ -26,28 +26,32 @@
 <h2>使用GitHub+Pelican搭建博客，并使用Atom作为编辑器的一些tips</h2>
 <p>Pelican 搭建博客后，GitHub上的master分支为网页文件，source分支为生成master分支内容的源代码。
 因而Atom中我需要建立两个项目，一个与master分支同步，一个与source分支同步。</p>
-<ol>
-<li>先与source分支同步，因为source使用命令 make html 运行后生成的网页文件是放在source里的output文件夹中的。而我需要先从GitHub上把source分支拉取下来，才能修改markdown文件，进而使用make html命令生成output中可以发布的网页文件。</li>
-<li>使用如下命令拉取source分支的代码</li>
-</ol>
+<ul>
+<li>
+<p>先与source分支同步，因为source使用命令 make html 运行后生成的网页文件是放在source里的output文件夹中的。而我需要先从GitHub上把source分支拉取下来，才能修改markdown文件，进而使用make html命令生成output中可以发布的网页文件。</p>
+</li>
+<li>
+<p>使用如下命令拉取source分支的代码</p>
+</li>
+</ul>
 <div class="highlight"><pre><span></span>git init
 git remote add origin https://github.com/chinazhang/chinazhang.github.io.git
 git pull origin source
 </pre></div>
 
 
-<ol>
+<ul>
 <li>进入output文件夹中，使用如下命令拉取master分支（猜测不拉也可以，等再source中make html后，再在这个文件夹里面强制push就可以了）</li>
-</ol>
+</ul>
 <div class="highlight"><pre><span></span>git init
 git remote add origin https://github.com/chinazhang/chinazhang.github.io.git
 git pull origin master
 </pre></div>
 
 
-<ol>
+<ul>
 <li>进入上一级文件夹，使用如下命令，新建source分支，切换到source分支</li>
-</ol>
+</ul>
 <div class="highlight"><pre><span></span>git branch source
 git checkout source
 </pre></div>
@@ -59,18 +63,18 @@ git checkout source
 <p>在content下面创建pages文件夹，并放一个md文件进去，就会在博客主页上多一个标签页。其他的准备学习下下面的官方手册</p>
 <p><a href="http://docs.getpelican.com/en/stable/">Pelican官方手册链接</a></p>
 <h2>git 命令备注</h2>
-<ol>
+<ul>
 <li>删除GitHub上的某个文件夹</li>
-</ol>
+</ul>
 <div class="highlight"><pre><span></span>git rm -r --cached Photo 删除Photo文件夹
 git commit -m &#39;删除了Photo文件夹t&#39;  提交,添加操作说明
 git push -u origin master 将本次更改更新到GitHub项目上去
 </pre></div>
 
 
-<ol>
+<ul>
 <li>拉取GitHub的master或者source分支</li>
-</ol>
+</ul>
 <div class="highlight"><pre><span></span>git pull origin master
 git pull origin source
 </pre></div>
