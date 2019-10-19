@@ -74,3 +74,21 @@ git pull origin source
 ## 其他备注
 
 树莓派本地IP 192.168.137.102
+mac account： zgw0254@icloud.com
+
+# mac降版本安装
+
+1、制作USB镜像命令
+
+```
+sudo /Applications/Install\ macOS\ High\ Sierra.app/Contents/Resources/createinstallmedia –-volume /Volumes/Sierra –-applicationpath /Applications/Install\ macOS\ High\ Sierra.app –-nointeraction
+```
+
+2、关机。开机时长按option键
+
+3、Mojave 降级需要格式化
+
+先在磁盘工具左上选择显示所有设备。
+然后选择apple SSD 磁盘，抹除选项中名称为 Macintosh HD ，格式选 MAC OS Extened(journaled)，方案为 GUID 分区图
+
+4、重新安装系统
