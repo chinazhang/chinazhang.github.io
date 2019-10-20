@@ -80,9 +80,22 @@ mac account： zgw0254@icloud.com
 
 1、制作USB镜像命令
 
+high sierra
+
 ```
 sudo /Applications/Install\ macOS\ High\ Sierra.app/Contents/Resources/createinstallmedia –-volume /Volumes/Sierra –-applicationpath /Applications/Install\ macOS\ High\ Sierra.app –-nointeraction
 ```
+
+Catalina
+
+```
+sudo /Applications/Install\ macOS\ Catalina.app/Contents/Resources/createinstallmedia --volume /Volumes/USB --nointeraction
+```
+
+   * If you want to be asked for confirmation before erasing the drive, remove “–-nointeraction” from the command.
+   * Older versions of macOS used an “-–applicationpath” flag in this command, but this is now deprecated and will cause an error if used. Use the command above, instead of updating the command mentioned in guides which were written for previous versions of macOS
+
+
 
 2、关机。开机时长按option键
 

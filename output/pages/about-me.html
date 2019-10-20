@@ -85,10 +85,20 @@ git pull origin source
 mac account： zgw0254@icloud.com</p>
 <h1>mac降版本安装</h1>
 <p>1、制作USB镜像命令</p>
+<p>high sierra</p>
 <div class="highlight"><pre><span></span>sudo /Applications/Install\ macOS\ High\ Sierra.app/Contents/Resources/createinstallmedia –-volume /Volumes/Sierra –-applicationpath /Applications/Install\ macOS\ High\ Sierra.app –-nointeraction
 </pre></div>
 
 
+<p>Catalina</p>
+<div class="highlight"><pre><span></span>sudo /Applications/Install\ macOS\ Catalina.app/Contents/Resources/createinstallmedia --volume /Volumes/USB --nointeraction
+</pre></div>
+
+
+<ul>
+<li>If you want to be asked for confirmation before erasing the drive, remove “–-nointeraction” from the command.</li>
+<li>Older versions of macOS used an “-–applicationpath” flag in this command, but this is now deprecated and will cause an error if used. Use the command above, instead of updating the command mentioned in guides which were written for previous versions of macOS</li>
+</ul>
 <p>2、关机。开机时长按option键</p>
 <p>3、Mojave 降级需要格式化</p>
 <p>先在磁盘工具左上选择显示所有设备。
