@@ -106,11 +106,31 @@ sudo /Applications/Install\ macOS\ Catalina.app/Contents/Resources/createinstall
 
 4、重新安装系统
 
-### latex try
+# enable latex math support in pelican
 
+  * install plugin pelican_render_math
 
+```
+pip install pelican-render-math
+pip install typogrify
+```
+
+  * add the following code to your pelicanconf.py and publishconf.py file:
+
+```
+PLUGINS = ["pelican_render_math"]
+```
+
+  * then
+
+```
+$t=\sqrt{ma}$
+```
+will like
 $t=\sqrt{ma}$
 
+```
 $c = \sqrt{a^{2}+b_{xy}^{2}+e^{x}}$
-
-$x^2$
+```
+will like
+$c = \sqrt{a^{2}+b_{xy}^{2}+e^{x}}$
