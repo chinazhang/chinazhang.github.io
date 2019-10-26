@@ -105,3 +105,10 @@ sudo /Applications/Install\ macOS\ Catalina.app/Contents/Resources/createinstall
 然后选择apple SSD 磁盘，抹除选项中名称为 Macintosh HD ，格式选 MAC OS Extened(journaled)，方案为 GUID 分区图
 
 4、重新安装系统
+
+### latex try
+
+
+$t=\sqrt{ma}$
+
+$ c = \sqrt{a^{2}+b_{xy}^{2}+e^{x}} $
