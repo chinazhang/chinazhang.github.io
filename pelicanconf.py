@@ -12,6 +12,9 @@ TIMEZONE = 'Asia/Shanghai'
 
 DEFAULT_LANG = 'en'
 
+PLUGIN_PATHS = ['pelican-plugins']
+PLUGINS = ['render_math']
+
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None

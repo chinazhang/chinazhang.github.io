@@ -109,6 +109,6 @@ sudo /Applications/Install\ macOS\ Catalina.app/Contents/Resources/createinstall
 ### latex try
 
 
-$t=\sqrt{ma}$
+$ t=\sqrt{ma} $
 
 $ c = \sqrt{a^{2}+b_{xy}^{2}+e^{x}} $
