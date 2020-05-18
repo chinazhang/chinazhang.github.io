@@ -70,6 +70,11 @@ kpi_with_geometry.plot(ax=ax, column='下行流量MB', cmap = 'Reds', legend = T
 plt.show()
 ```
 
+三、安装geoplot
+
+依赖包有 Cython、Cartopy、rasterio（中间在编译Cartopy时，使用osgeo4w安装了proj，不过后来使用了Cartopy的whl，安装成功了）
+
+但是导入geoplot时，出现了numpy.ufunc size changed 告警，百度一下，说是某个两个包的版本不匹配。看了一下告警，与rasterio和numpy有关，当前使用的numpy的版本是1.13.3，于是使用pip uninstall numpy,再重新安装下rasterio，安装了numpy的1.18.3后解决了。故障应该是numpy的版本太低导致的。
 
 
 参考链接：
