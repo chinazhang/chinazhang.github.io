@@ -118,7 +118,7 @@ pip install typogrify
   * add the following code to your pelicanconf.py and publishconf.py file:
 
 ```
-PLUGINS = ["pelican_render_math"]
+PLUGINS = ["render_math"]
 ```
 
   * then
