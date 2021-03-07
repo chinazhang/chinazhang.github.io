@@ -60,7 +60,7 @@ make html需要到output的上一级文件夹里用git的bash窗口敲该命令�
 
 ```
 git rm -r --cached Photo 删除Photo文件夹
-git commit -m '删除了Photo文件夹t'  提交,添加操作说明
+git commit -m '删除了Photo文件夹t' / git commit -am 'anythingelse'  提交,添加操作说明
 git push -u origin master 将本次更改更新到GitHub项目上去
 ```
 
@@ -69,6 +69,13 @@ git push -u origin master 将本次更改更新到GitHub项目上去
 ```
 git pull origin master
 git pull origin source
+```
+
+- git add Untracked files
+
+```
+git add * 将目录中所有文件提交到暂存区
+git commit -am 'anythingelse'
 ```
 
 ## 其他备注

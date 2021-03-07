@@ -70,7 +70,7 @@
 <li>删除GitHub上的某个文件夹</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="err">git rm -r --cached Photo 删除Photo文件夹</span>
-<span class="err">git commit -m &#39;删除了Photo文件夹t&#39;  提交,添加操作说明</span>
+<span class="err">git commit -m &#39;删除了Photo文件夹t&#39; / git commit -am &#39;anythingelse&#39;  提交,添加操作说明</span>
 <span class="err">git push -u origin master 将本次更改更新到GitHub项目上去</span>
 </code></pre></div>
 
@@ -80,6 +80,14 @@
 </ul>
 <div class="highlight"><pre><span></span><code><span class="err">git pull origin master</span>
 <span class="err">git pull origin source</span>
+</code></pre></div>
+
+
+<ul>
+<li>git add Untracked files</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="err">git add * 将目录中所有文件提交到暂存区</span>
+<span class="err">git commit -am &#39;anythingelse&#39;</span>
 </code></pre></div>
 
 
