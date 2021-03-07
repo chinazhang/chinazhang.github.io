@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <meta name="generator" content="Pelican" />
+        <title>Tips</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">chinazhang's blog</a></h1>
+                <nav><ul>
+                    <li class="active"><a href="/pages/tips.html">Tips</a></li>
+                    <li><a href="/category/chinese.html">Chinese</a></li>
+                    <li><a href="/category/learn.html">learn</a></li>
+                    <li><a href="/category/math.html">math</a></li>
+                    <li><a href="/category/misc.html">misc</a></li>
+                    <li><a href="/category/vocabulary.html">vocabulary</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+    <h1 class="entry-title">Tips</h1>
+    
+    <h1>备注几个十一期间浏览的网站</h1>
+<p>新增语音识别博主文章链接  http://pelhans.com/ https://blog.ailemon.me/2017/02/17/how-to-collect-data-for-machine-learning/  </p>
+<p>免费的语音数据集  http://www.openslr.org/index.html   https://github.com/awesomedata</p>
+<p>新增对撞机开放数据链接   http://opendata.cern.ch/docs/about-cms</p>
+<h1>设置atom相关命令备注</h1>
+<p>newchange "use git pull https://github.com/chinazhang/chinazhang.github.io.git" get Atom support</p>
+<h2>使用GitHub+Pelican搭建博客，并使用Atom作为编辑器的一些tips</h2>
+<p>Pelican 搭建博客后，GitHub上的master分支为网页文件，source分支为生成master分支内容的源代码。
+因而Atom中我需要建立两个项目，一个与master分支同步，一个与source分支同步。</p>
+<ul>
+<li>
+<p>先与source分支同步，因为source使用命令 make html 运行后生成的网页文件是放在source里的output文件夹中的。而我需要先从GitHub上把source分支拉取下来，才能修改markdown文件，进而使用make html命令生成output中可以发布的网页文件。</p>
+</li>
+<li>
+<p>使用如下命令拉取source分支的代码</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="err">git init</span>
+<span class="err">git remote add origin https://github.com/chinazhang/chinazhang.github.io.git</span>
+<span class="err">git pull origin source</span>
+</code></pre></div>
+
+
+<ul>
+<li>进入output文件夹中，使用如下命令拉取master分支（猜测不拉也可以，等再source中make html后，再在这个文件夹里面强制push就可以了）</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="err">git init</span>
+<span class="err">git remote add origin https://github.com/chinazhang/chinazhang.github.io.git</span>
+<span class="err">git pull origin master</span>
+</code></pre></div>
+
+
+<ul>
+<li>进入上一级文件夹，使用如下命令，新建source分支，切换到source分支</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="err">git branch source</span>
+<span class="err">git checkout source</span>
+</code></pre></div>
+
+
+<p>至此，Atom中的source文件夹中同步就变成source分支同步了，而output文件夹仍然为master同步。完成了Atom的配置</p>
+<p>make html需要到output的上一级文件夹里用git的bash窗口敲该命令，完成后到Atom里进行上传代码</p>
+<h2>Pelican 备注</h2>
+<p>在content下面创建pages文件夹，并放一个md文件进去，就会在博客主页上多一个标签页。其他的准备学习下下面的官方手册</p>
+<p><a href="http://docs.getpelican.com/en/stable/">Pelican官方手册链接</a></p>
+<h2>git 命令备注</h2>
+<ul>
+<li>删除GitHub上的某个文件夹</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="err">git rm -r --cached Photo 删除Photo文件夹</span>
+<span class="err">git commit -m &#39;删除了Photo文件夹t&#39; / git commit -am &#39;anythingelse&#39;  提交,添加操作说明</span>
+<span class="err">git push -u origin master 将本次更改更新到GitHub项目上去</span>
+</code></pre></div>
+
+
+<ul>
+<li>拉取GitHub的master或者source分支</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="err">git pull origin master</span>
+<span class="err">git pull origin source</span>
+</code></pre></div>
+
+
+<ul>
+<li>git add Untracked files</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="err">git add * 将目录中所有文件提交到暂存区</span>
+<span class="err">git commit -am &#39;anythingelse&#39;</span>
+</code></pre></div>
+
+
+<h2>其他备注</h2>
+<p>树莓派本地IP 192.168.137.102
+mac account： zgw0254@icloud.com</p>
+<h1>mac降版本安装</h1>
+<p>1、制作USB镜像命令</p>
+<p>high sierra</p>
+<div class="highlight"><pre><span></span><code><span class="err">sudo /Applications/Install\ macOS\ High\ Sierra.app/Contents/Resources/createinstallmedia –-volume /Volumes/Sierra –-applicationpath /Applications/Install\ macOS\ High\ Sierra.app –-nointeraction</span>
+</code></pre></div>
+
+
+<p>Catalina</p>
+<div class="highlight"><pre><span></span><code><span class="err">sudo /Applications/Install\ macOS\ Catalina.app/Contents/Resources/createinstallmedia --volume /Volumes/USB --nointeraction</span>
+</code></pre></div>
+
+
+<ul>
+<li>If you want to be asked for confirmation before erasing the drive, remove “–-nointeraction” from the command.</li>
+<li>Older versions of macOS used an “-–applicationpath” flag in this command, but this is now deprecated and will cause an error if used. Use the command above, instead of updating the command mentioned in guides which were written for previous versions of macOS</li>
+</ul>
+<p>2、关机。开机时长按option键</p>
+<p>3、Mojave 降级需要格式化</p>
+<p>先在磁盘工具左上选择显示所有设备。
+然后选择apple SSD 磁盘，抹除选项中名称为 Macintosh HD ，格式选 MAC OS Extened(journaled)，方案为 GUID 分区图</p>
+<p>4、重新安装系统</p>
+<h1>enable latex math support in pelican</h1>
+<ul>
+<li>install plugin pelican_render_math</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="err">pip install pelican-render-math</span>
+<span class="err">pip install typogrify</span>
+</code></pre></div>
+
+
+<ul>
+<li>add the following code to your pelicanconf.py and publishconf.py file:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="err">PLUGINS = [&quot;render_math&quot;]</span>
+</code></pre></div>
+
+
+<ul>
+<li>then</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="err">$t=\sqrt{ma}$</span>
+</code></pre></div>
+
+
+<p>will like
+<span class="math">\(t=\sqrt{ma}\)</span></p>
+<div class="highlight"><pre><span></span><code><span class="err">$c = \sqrt{a^{2}+b_{xy}^{2}+e^{x}}$</span>
+</code></pre></div>
+
+
+<p>will like
+<span class="math">\(c = \sqrt{a^{2}+b_{xy}^{2}+e^{x}}\)</span></p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>links</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                            <li><a href="#">You can modify those links in your config file</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="https://getpelican.com/">Pelican</a>, which takes great advantage of <a href="https://www.python.org/">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="https://www.smashingmagazine.com/2009/08/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>
