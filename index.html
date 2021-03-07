@@ -11,16 +11,77 @@
         <header id="banner" class="body">
                 <h1><a href="/">chinazhang's blog</a></h1>
                 <nav><ul>
-                    <li><a href="/pages/about-me.html">About Me</a></li>
+                    <li><a href="/pages/tips.html">Tips</a></li>
+                    <li><a href="/category/chinese.html">Chinese</a></li>
                     <li><a href="/category/learn.html">learn</a></li>
                     <li><a href="/category/math.html">math</a></li>
                     <li><a href="/category/misc.html">misc</a></li>
+                    <li><a href="/category/vocabulary.html">vocabulary</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="/learn.html">学习geopandas</a></h1>
+                    <h1 class="entry-title"><a href="/Chinese-writing-practice.html">Writing practice</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2021-03-07T00:00:00+08:00">
+                Published: 日 07 三月 2021
+        </abbr>
+		<br />
+        <abbr class="modified" title="2021-03-07T00:00:00+08:00">
+                Updated: 日 07 三月 2021
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/chinazhang.html">chinazhang</a>
+        </address>
+<p>In <a href="/category/chinese.html">Chinese</a>.</p>
+<p>tags: <a href="/tag/experience.html">experience</a> </p>
+</footer><!-- /.post-info -->                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/English-marks.html" rel="bookmark"
+                           title="Permalink to English reading marks">English reading marks</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2021-03-07T00:00:00+08:00">
+                Published: 日 07 三月 2021
+        </abbr>
+		<br />
+        <abbr class="modified" title="2021-03-07T00:00:00+08:00">
+                Updated: 日 07 三月 2021
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/chinazhang.html">chinazhang</a>
+        </address>
+<p>In <a href="/category/vocabulary.html">vocabulary</a>.</p>
+<p>tags: <a href="/tag/english-vocabulary.html">English vocabulary</a> </p>
+</footer><!-- /.post-info -->                <ul>
+<li>The Moon and Sixpence</li>
+</ul>
+<p>The adulation of his admirers is perhaps no less capricious than the disparagement of his detractors</p>
+<p>His decent reticence is branded as hypocrisy, his circumlocutions are roundly called lies, and his silence is vilified as treachery.</p>
+<p>The mystic sees the ineffable, and the psycho-pathologist the unspeakable …</p>
+                <a class="readmore" href="/English-marks.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/learn.html" rel="bookmark"
+                           title="Permalink to 学习geopandas">学习geopandas</a></h1>
+                </header>
+
+                <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2020-05-01T22:19:00+08:00">
                 Published: 五 01 五月 2020
@@ -35,7 +96,7 @@
         </address>
 <p>In <a href="/category/learn.html">learn</a>.</p>
 <p>tags: <a href="/tag/geopandas.html">geopandas</a> </p>
-</footer><!-- /.post-info --><h1>一、geopandas install use pip</h1>
+</footer><!-- /.post-info -->                <h1>一、geopandas install use pip</h1>
 <p>按https://geopandas.org/install.html网址安装依赖 numpy,pandas,shapely,fiona,pyproj,six,matplotlib,descartes</p>
 <p>没有使用 Anaconda 是因为我使用它安装失败了，而且完整的 Anaconda 太大了，占了我3个G的空间</p>
 <ul>
@@ -43,82 +104,10 @@
 GDAL-3.0.4-cp36-cp36m-win_amd64.whl，Fiona-1.8.13-cp36-cp36m-win_amd64.whl。36是指我电脑安装的python版本是python3.6。
 安装命令为</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="err">pip install Fiona-1.8.13-cp36-cp36m-win_amd64.whl</span>
-</code></pre></div>
-
-
-<p>备忘一下setup.py安装方法</p>
-<div class="highlight"><pre><span></span><code><span class="err">python setup.py build</span>
-<span class="err">python setup.py install</span>
-</code></pre></div>
-
-
-<ul>
-<li>后续进行数据可视化时，需要用到scheme参数，需要安装mapclassify，依赖包有scipy,scikit-learn</li>
-</ul>
-<h1>二、相关使用</h1>
-<ul>
-<li>依赖包导入</li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">geopandas</span> <span class="kn">as</span> <span class="nn">gp</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
-</code></pre></div>
-
-
-<ul>
-<li>IO
-pandas 使用 read_excel 和 read_csv来读取 Excel和csv格式的文件。usecols筛选列。（后续需要学一下直接读压缩包内的数据）</li>
-</ul>
-<p>geopandas 使用 read_file 读取地图文件。
-http://datav.aliyun.com/tools/atlas/#&amp;lat=31.840232667909365&amp;lng=104.2822265625&amp;zoom=4 上可以下载我国地图的json文件</p>
-<div class="highlight"><pre><span></span><code><span class="err">sitesdata = pd.read_excel(&#39;E:\geopandas_try\sitedata.xlsx&#39;, sheet_name=&#39;Sheet1&#39;)</span>
-<span class="err">kpidata = pd.read_csv(&#39;E:\geopandas_try\omc7_lte_cell_kpi_day_20200408.csv&#39;, usecols = [&#39;ECGI&#39;,&#39;下行流量MB&#39;,&#39;上行流量MB&#39;])</span>
-<span class="err">shanghai = gp.read_file(&#39;E:\上海市.json&#39;)</span>
-</code></pre></div>
-
-
-<ul>
-<li>撒点作图需要相同的CRS坐标系，merge可以连接两个表，loc表示了连接后的结果的列</li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="err">gdf = gp.GeoDataFrame(sitesdata, geometry=gp.points_from_xy(sitesdata.经度, sitesdata.纬度), crs=&quot;EPSG:4326&quot;)</span>
-<span class="err">kpi_with_geometry = pd.merge(left=kpidata,right=gdf,left_on=&#39;ECGI&#39;,right_on=&#39;CGI&#39;,how=&#39;right&#39;).loc[:,[&#39;ECGI&#39;,&#39;下行流量MB&#39;,&#39;上行流量MB&#39;,&#39;geometry&#39;]]</span>
-<span class="err">kpi_with_geometry = gp.GeoDataFrame(kpi_with_geometry, crs=&quot;EPSG:4326&quot;)</span>
-</code></pre></div>
-
-
-<ul>
-<li>pandas的concat可以合并读入的多个表格</li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="err">result = pd.concat([pd.read_csv(&#39;file_0.csv&#39;),pd.read_csv(&#39;file_1.csv&#39;), pd.read_csv(&#39;file_2.csv&#39;)], ignore_index = True)</span>
-</code></pre></div>
-
-
-<ul>
-<li>撒点作图，scheme选择不同的数据分段算法</li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="n">subplots</span><span class="p">()</span>
-<span class="n">shanghai</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;white&#39;</span> <span class="p">,</span><span class="n">edgecolor</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
-<span class="n">kpi_with_geometry</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="k">column</span><span class="o">=</span><span class="s1">&#39;下行流量MB&#39;</span><span class="p">,</span> <span class="n">cmap</span> <span class="o">=</span> <span class="s1">&#39;Reds&#39;</span><span class="p">,</span> <span class="n">legend</span> <span class="o">=</span> <span class="k">True</span><span class="p">,</span> <span class="n">scheme</span><span class="o">=</span><span class="s1">&#39;NaturalBreaks&#39;</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">5</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="p">.</span><span class="k">show</span><span class="p">()</span>
-</code></pre></div>
-
-
-<p>三、安装geoplot</p>
-<p>依赖包有 Cython、Cartopy、rasterio（中间在编译Cartopy时，使用osgeo4w安装了proj，不过后来使用了Cartopy的whl，安装成功了）</p>
-<p>但是导入geoplot时，出现了numpy.ufunc size changed 告警，百度一下，说是某个两个包的版本不匹配。看了一下告警，与rasterio和numpy有关，当前使用的numpy的版本是1.13.3，于是使用pip uninstall numpy,再重新安装下rasterio，安装了numpy的1.18.3后解决了。故障应该是numpy的版本太低导致的。</p>
-<p>参考链接：
-https://geopandas.org
-https://www.cnblogs.com/feffery/</p>
-<p>python依赖包下载链接：
-https://www.lfd.uci.edu/~gohlke/pythonlibs
-https://pypi.org/</p>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
+<div class="highlight"><pre><span></span><code><span class="err">pip install Fiona-1.8 …</span></code></pre></div>
+                <a class="readmore" href="/learn.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
 
             <li><article class="hentry">
                 <header>
