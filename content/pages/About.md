@@ -149,14 +149,14 @@ $c = \sqrt{a^{2}+b_{xy}^{2}+e^{x}}$
   * 下载NDM
    [Neat Download Manager](http://www.neatdownloadmanager.com/index.php/en/)
   * 谷歌应用商店搜索NeatDownloadManager Extension
-   ![NEDextimg](/img/NDMextimg.png)
+   ![NEDextimg]({static}/pages/img/NDMextimg.png)
   * 打开NDM，在配置中修改最大连接数为32
-   ![NEDsitting](/img/NDMsitting.png)
+   ![NEDsitting]({static}/pages/img/NDMsitting.png)
 
 # MAC下LaTeX字体修改
 
 参考[MAC下LaTeX字体修改](https://blog.csdn.net/cdqn10086/article/details/70197919)
 
 使用字体直接查看postscript名称
-![font](/img/fontimg.png)
+![font]({static}/pages/img/fontimg.png)
 
