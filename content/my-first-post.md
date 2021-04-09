@@ -8,3 +8,5 @@ Authors: chinazhang
 Summary: Try my first blog via Raspberry Pi!
 
 This is the *first post* from my Pelican blog. Type by my Raspberry Pi2.
+
+change token try
