@@ -67,6 +67,14 @@ git checkout source
 <h2>Pelican 备注</h2>
 <p>在content下面创建pages文件夹，并放一个md文件进去，就会在博客主页上多一个标签页。其他的准备学习下下面的官方手册</p>
 <p><a href="http://docs.getpelican.com/en/stable/">Pelican官方手册链接</a></p>
+<ul>
+<li>
+<p>win系统下一般安装git、替换make文件、安装Python、安装Pelican和typogrify便可使用</p>
+</li>
+<li>
+<p>win系统下Python安装完Pelican之后要在系统变量中增加Pelican的路径，在Python文件夹下的Scripts文件夹下</p>
+</li>
+</ul>
 <h2>git 命令备注</h2>
 <ul>
 <li>删除GitHub上的某个文件夹</li>
@@ -76,6 +84,10 @@ git commit -m &#39;删除了Photo文件夹t&#39; / git commit -am &#39;anythinge
 git push -u origin master 将本次更改更新到GitHub项目上去
 </code></pre></div>
 
+<ul>
+<li>refs报错</li>
+</ul>
+<p>本地文件修改后使用git status查看。有提示要使用git commit -am 'any' 命令添加说明后才能push成功</p>
 <ul>
 <li>拉取GitHub的master或者source分支</li>
 </ul>
