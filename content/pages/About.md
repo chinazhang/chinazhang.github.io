@@ -53,6 +53,11 @@ make html需要到output的上一级文件夹里用git的bash窗口敲该命令�
 
 [Pelican官方手册链接](http://docs.getpelican.com/en/stable/)
 
+- win系统下一般安装git、替换make文件、安装Python、安装Pelican和typogrify便可使用
+
+- win系统下Python安装完Pelican之后要在系统变量中增加Pelican的路径，在Python文件夹下的Scripts文件夹下
+
+
 ## git 命令备注
 
 
@@ -63,6 +68,11 @@ git rm -r --cached Photo 删除Photo文件夹
 git commit -m '删除了Photo文件夹t' / git commit -am 'anythingelse'  提交,添加操作说明
 git push -u origin master 将本次更改更新到GitHub项目上去
 ```
+
+- refs报错
+
+本地文件修改后使用git status查看。有提示要使用git commit -am 'any' 命令添加说明后才能push成功
+
 
 - 拉取GitHub的master或者source分支
 
