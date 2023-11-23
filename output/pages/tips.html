@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
         <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="generator" content="Pelican" />
         <title>Tips</title>
         <link rel="stylesheet" href="/theme/css/main.css" />
@@ -41,28 +42,25 @@
 <p>使用如下命令拉取source分支的代码</p>
 </li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="err">git init</span>
-<span class="err">git remote add origin https://github.com/chinazhang/chinazhang.github.io.git</span>
-<span class="err">git pull origin source</span>
+<div class="highlight"><pre><span></span><code>git init
+git remote add origin https://github.com/chinazhang/chinazhang.github.io.git
+git pull origin source
 </code></pre></div>
-
 
 <ul>
 <li>进入output文件夹中，使用如下命令拉取master分支（猜测不拉也可以，等再source中make html后，再在这个文件夹里面强制push就可以了）</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="err">git init</span>
-<span class="err">git remote add origin https://github.com/chinazhang/chinazhang.github.io.git</span>
-<span class="err">git pull origin master</span>
+<div class="highlight"><pre><span></span><code>git init
+git remote add origin https://github.com/chinazhang/chinazhang.github.io.git
+git pull origin master
 </code></pre></div>
-
 
 <ul>
 <li>进入上一级文件夹，使用如下命令，新建source分支，切换到source分支</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="err">git branch source</span>
-<span class="err">git checkout source</span>
+<div class="highlight"><pre><span></span><code>git branch source
+git checkout source
 </code></pre></div>
-
 
 <p>至此，Atom中的source文件夹中同步就变成source分支同步了，而output文件夹仍然为master同步。完成了Atom的配置</p>
 <p>make html需要到output的上一级文件夹里用git的bash窗口敲该命令，完成后到Atom里进行上传代码</p>
@@ -73,27 +71,24 @@
 <ul>
 <li>删除GitHub上的某个文件夹</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="err">git rm -r --cached Photo 删除Photo文件夹</span>
-<span class="err">git commit -m &#39;删除了Photo文件夹t&#39; / git commit -am &#39;anythingelse&#39;  提交,添加操作说明</span>
-<span class="err">git push -u origin master 将本次更改更新到GitHub项目上去</span>
+<div class="highlight"><pre><span></span><code>git rm -r --cached Photo 删除Photo文件夹
+git commit -m &#39;删除了Photo文件夹t&#39; / git commit -am &#39;anythingelse&#39;  提交,添加操作说明
+git push -u origin master 将本次更改更新到GitHub项目上去
 </code></pre></div>
-
 
 <ul>
 <li>拉取GitHub的master或者source分支</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="err">git pull origin master</span>
-<span class="err">git pull origin source</span>
+<div class="highlight"><pre><span></span><code>git pull origin master
+git pull origin source
 </code></pre></div>
-
 
 <ul>
 <li>git add Untracked files</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="err">git add * 将目录中所有文件提交到暂存区</span>
-<span class="err">git commit -am &#39;anythingelse&#39;</span>
+<div class="highlight"><pre><span></span><code>git add * 将目录中所有文件提交到暂存区
+git commit -am &#39;anythingelse&#39;
 </code></pre></div>
-
 
 <h2>其他备注</h2>
 <p>树莓派本地IP 192.168.137.102
@@ -101,14 +96,12 @@ mac account： zgw0254@icloud.com</p>
 <h1>mac降版本安装</h1>
 <p>1、制作USB镜像命令</p>
 <p>high sierra</p>
-<div class="highlight"><pre><span></span><code><span class="err">sudo /Applications/Install\ macOS\ High\ Sierra.app/Contents/Resources/createinstallmedia –-volume /Volumes/Sierra –-applicationpath /Applications/Install\ macOS\ High\ Sierra.app –-nointeraction</span>
+<div class="highlight"><pre><span></span><code>sudo /Applications/Install\ macOS\ High\ Sierra.app/Contents/Resources/createinstallmedia –-volume /Volumes/Sierra –-applicationpath /Applications/Install\ macOS\ High\ Sierra.app –-nointeraction
 </code></pre></div>
-
 
 <p>Catalina</p>
-<div class="highlight"><pre><span></span><code><span class="err">sudo /Applications/Install\ macOS\ Catalina.app/Contents/Resources/createinstallmedia --volume /Volumes/USB --nointeraction</span>
+<div class="highlight"><pre><span></span><code>sudo /Applications/Install\ macOS\ Catalina.app/Contents/Resources/createinstallmedia --volume /Volumes/USB --nointeraction
 </code></pre></div>
-
 
 <ul>
 <li>If you want to be asked for confirmation before erasing the drive, remove “–-nointeraction” from the command.</li>
@@ -123,30 +116,26 @@ mac account： zgw0254@icloud.com</p>
 <ul>
 <li>install plugin pelican_render_math</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="err">pip install pelican-render-math</span>
-<span class="err">pip install typogrify</span>
+<div class="highlight"><pre><span></span><code>pip install pelican-render-math
+pip install typogrify
 </code></pre></div>
-
 
 <ul>
 <li>add the following code to your pelicanconf.py and publishconf.py file:</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="err">PLUGINS = [&quot;render_math&quot;]</span>
+<div class="highlight"><pre><span></span><code>PLUGINS = [&quot;render_math&quot;]
 </code></pre></div>
-
 
 <ul>
 <li>then</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="err">$t=\sqrt{ma}$</span>
+<div class="highlight"><pre><span></span><code><span class="p">$</span><span class="nv">t</span><span class="o">=</span>\<span class="nv">sqrt</span><span class="p">{</span><span class="nv">ma</span><span class="p">}$</span>
 </code></pre></div>
-
 
 <p>will like
 <span class="math">\(t=\sqrt{ma}\)</span></p>
-<div class="highlight"><pre><span></span><code><span class="err">$c = \sqrt{a^{2}+b_{xy}^{2}+e^{x}}$</span>
+<div class="highlight"><pre><span></span><code><span class="p">$</span><span class="nv">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>\<span class="nv">sqrt</span><span class="p">{</span><span class="nv">a</span><span class="o">^</span><span class="p">{</span><span class="mi">2</span><span class="p">}</span><span class="o">+</span><span class="nv">b_</span><span class="p">{</span><span class="nv">xy</span><span class="p">}</span><span class="o">^</span><span class="p">{</span><span class="mi">2</span><span class="p">}</span><span class="o">+</span><span class="nv">e</span><span class="o">^</span><span class="p">{</span><span class="nv">x</span><span class="p">}}$</span>
 </code></pre></div>
-
 
 <p>will like
 <span class="math">\(c = \sqrt{a^{2}+b_{xy}^{2}+e^{x}}\)</span></p>
@@ -249,10 +238,10 @@ mac account： zgw0254@icloud.com</p>
 
         <footer id="contentinfo" class="body">
                 <address id="about" class="vcard body">
-                Proudly powered by <a href="https://getpelican.com/">Pelican</a>, which takes great advantage of <a href="https://www.python.org/">Python</a>.
+                Proudly powered by <a rel="nofollow" href="https://getpelican.com/">Pelican</a>, which takes great advantage of <a rel="nofollow" href="https://www.python.org/">Python</a>.
                 </address><!-- /#about -->
 
-                <p>The theme is by <a href="https://www.smashingmagazine.com/2009/08/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+                <p>The theme is by <a rel="nofollow" href="https://www.smashingmagazine.com/2009/08/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
         </footer><!-- /#contentinfo -->
 
 </body>
