@@ -1,7 +1,7 @@
 Title: 拉格朗日方程
 Date: 2019-10-17 22:19
 Modified: 2019-11-05 22:20
-Category: math
+Category: physical
 Tags: math lage
 Slug: Math
 
